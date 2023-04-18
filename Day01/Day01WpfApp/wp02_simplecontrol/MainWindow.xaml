@@ -1,0 +1,20 @@
+﻿<Window x:Class="wp02_simplecontrol.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wp02_simplecontrol"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="250">
+    <StackPanel>
+        <TextBlock Text="텍스트 블럭" Width="100" />
+        <Label Content ="라벨 컨트롤" Width="100" />
+        <TextBox Text = "텍스트박스" Width="100"/>
+        <PasswordBox Password="패스워드박스" Width="100"/>
+        <Slider x:Name="SldStep" Value="4" Width="100" ValueChanged="SldStep_ValueChanged" />
+        <ProgressBar x:Name="PgbStep" Value="4" Width="100" Height="15" Maximum="10" />
+
+        <Image Source="Resources/xaml.png" Height="32" Width="32" />  
+        <MediaElement Source="Resources/video.mp4" Width="200" Height="100" LoadedBehavior="Play" />
+    </StackPanel>
+</Window>
