@@ -48,4 +48,14 @@ Windows Presentation Foundation
 6일차 영화검색앱 중간
 <img src = "https://raw.githubusercontent.com/kooweajeeI/pknu-wpf-2023/main/images/wpf02.png" width="700" />
 	
-	
+## 7일차
+- WPF 응용
+	- 영화검색앱	
+		- 화면정리
+		- CefSharp
+		- YouTube OpenAPI
+		- DB 데이터바인딩
+		
+		
+7일차 영화검색앱 중간
+<img src = "https://raw.githubusercontent.com/kooweajeeI/pknu-wpf-2023/main/images/wpf03.png" width="700" />
