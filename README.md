@@ -55,7 +55,14 @@ Windows Presentation Foundation
 		- CefSharp
 		- YouTube OpenAPI
 		- DB 데이터바인딩
-		
-		
-7일차 영화검색앱 중간
-<img src = "https://raw.githubusercontent.com/kooweajeeI/pknu-wpf-2023/main/images/wpf03.png" width="700" />
+
+## 8일차
+- WPF 응용
+	- 영화검색앱	
+		- DB 데이터바인딩 (MySQL)
+	- 미세먼지 확인 앱
+		- 데이터포털 OpenAPI
+		- DB 데이터바인딩
+
+영화검색앱
+<img src = "https://raw.githubusercontent.com/kooweajeeI/pknu-wpf-2023/main/images/wpf05.png" width="700" />
