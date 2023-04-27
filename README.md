@@ -66,3 +66,6 @@ Windows Presentation Foundation
 
 영화검색앱
 <img src = "https://raw.githubusercontent.com/kooweajeeI/pknu-wpf-2023/main/images/wpf05.gif" width="700" />
+
+미세먼지확인앱 중간
+<img src = "https://raw.githubusercontent.com/kooweajeeI/pknu-wpf-2023/main/images/wpf06.png" width="700" />
