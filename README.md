@@ -54,7 +54,7 @@ Windows Presentation Foundation
 		- 화면정리
 		- CefSharp
 		- YouTube OpenAPI
-		- DB 데이터바인딩
+		- DB 데이터바인딩 (SQL Server)
 
 ## 8일차
 - WPF 응용
@@ -62,7 +62,7 @@ Windows Presentation Foundation
 		- DB 데이터바인딩 (MySQL)
 	- 미세먼지 확인 앱
 		- 데이터포털 OpenAPI
-		- DB 데이터바인딩
+		- DB 데이터바인딩 (MySQL)
 
 영화검색앱
-<img src = "https://raw.githubusercontent.com/kooweajeeI/pknu-wpf-2023/main/images/wpf05.png" width="700" />
+<img src = "https://raw.githubusercontent.com/kooweajeeI/pknu-wpf-2023/main/images/wpf05.gif" width="700" />
