@@ -4,17 +4,10 @@ using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using wp11_movieFinder.Models;
 
 namespace wp11_movieFinder
@@ -71,7 +64,7 @@ namespace wp11_movieFinder
             var res = await req.ExecuteAsync();     // 검색결과를 받아옴
 
             Debug.WriteLine("유튜브 검색결과 -------");
-            foreach (var item in res.Items) 
+            foreach (var item in res.Items)
             {
                 Debug.WriteLine(item.Snippet.Title);
                 if (item.Id.Kind.Equals("youtube#video"))       // youtube#video만 동영상 플레이 가능
@@ -106,5 +99,5 @@ namespace wp11_movieFinder
             BrsYoutube.Dispose();   // 리소스 해제
         }
     }
-    
+
 }

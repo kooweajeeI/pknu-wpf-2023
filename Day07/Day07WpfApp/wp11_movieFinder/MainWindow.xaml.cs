@@ -1,5 +1,4 @@
 ﻿using MahApps.Metro.Controls;
-using MySql.Data.MySqlClient;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -7,21 +6,13 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Runtime.Remoting.Channels;
 using System.Text;
-using System.Threading.Tasks;
 using System.Web;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using wp11_movieFinder.Logics;
 using wp11_movieFinder.Models;
 
@@ -139,7 +130,7 @@ namespace wp11_movieFinder
                     Vote_Average = Convert.ToDouble(val["vote_average"])
                 };
                 movieItems.Add(MovieItem);
-                
+
             }
             this.DataContext = movieItems;
             isFavorite = false;
@@ -506,5 +497,5 @@ namespace wp11_movieFinder
             BtnViewFavorite_Click(sender, e);   // 즐겨찾기 보기 이벤트핸들러를 한번실행
         }
     }
-    
+
 }

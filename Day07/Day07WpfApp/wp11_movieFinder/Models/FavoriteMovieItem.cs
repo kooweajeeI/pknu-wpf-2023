@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace wp11_movieFinder.Models
 {
@@ -19,6 +15,6 @@ namespace wp11_movieFinder.Models
         public string Release_Date { get; set; }
         public string Title { get; set; }
         public double Vote_Average { get; set; }
-        public DateTime Reg_Date { get; set; }  
+        public DateTime Reg_Date { get; set; }
     }
 }
