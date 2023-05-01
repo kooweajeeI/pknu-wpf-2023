@@ -33,7 +33,7 @@
                      mah:TextBoxHelper.ClearTextButton="True" 
                      InputMethod.PreferredImeState="On"
                      InputMethod.PreferredImeConversionMode="Native"
-                     KeyDown="TxtMovieName_KeyDown"/>
+                     KeyDown="TxtMovieName_KeyDown" TextChanged="TxtMovieName_TextChanged"/>
             <Button Grid.Column="1" x:Name="BtnSearchMovie" FontSize="14" Margin="5, 10"
                     Content="검색" Style="{StaticResource MahApps.Styles.Button.Square.Accent}" Click="BtnSearchMovie_Click">
                 <Button.ContentTemplate>

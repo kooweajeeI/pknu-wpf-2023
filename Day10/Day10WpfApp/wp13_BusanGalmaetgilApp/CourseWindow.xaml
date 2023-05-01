@@ -1,0 +1,137 @@
+﻿<mah:MetroWindow x:Class="wp13_BusanGalmaetgilApp.CourseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wp13_BusanGalmaetgilApp"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"        
+        Title="부산광역시 갈맷길 코스정보" Height="450" Width="800" FontFamily="NanumGothic" >
+    <mah:MetroWindow.IconTemplate>
+        <DataTemplate>
+            <iconPacks:PackIconRPGAwesome Kind="Seagull" Margin="5,7,0,0" Foreground="White" />
+        </DataTemplate>
+    </mah:MetroWindow.IconTemplate>
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="5"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+
+        </Grid>
+
+        <!--데이터그리드 영역-->
+        <DataGrid Grid.Row="0" Grid.Column="0" x:Name="GrdResult" Margin="5"
+                  IsReadOnly="True" Style="{StaticResource MahApps.Styles.DataGrid.Azure}"
+                  ItemsSource="{Binding}" AutoGenerateColumns="False" SelectionChanged="GrdResult_SelectionChanged"
+                  >
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Course_nm}" Header="코스번호" FontWeight="Bold" />
+                <DataGridTextColumn Binding="{Binding Gugan_nm}" Header="구간" />
+                <DataGridTextColumn Binding="{Binding Gm_range}" Header="거리" />
+                <DataGridTextColumn Binding="{Binding Gm_degree}" Header="난이도" />
+                <DataGridTextColumn Binding="{Binding Gm_course}" Header="코스" />
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+        <!--상세정보 읽기 영역-->
+        <Grid Grid.Row="0" Grid.Column="1">
+            <GroupBox Header="상세정보"  Margin="10"
+                      mah:HeaderedControlHelper.HeaderFontSize="14"
+                      mah:HeaderedControlHelper.HeaderHorizontalContentAlignment="Center"
+                      mah:HeaderedControlHelper.HeaderFontFamily="NanumGothic"
+                      mah:HeaderedControlHelper.HeaderFontWeight="Bold">
+                <ScrollViewer>
+                    <TextBlock TextWrapping="Wrap" x:Name="Informations"/>
+                </ScrollViewer>
+
+            </GroupBox>
+        </Grid>
+
+        <!--버튼영역-->
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
+            <Button x:Name="BtnAll" Content="전체 조회" Margin="5, 20" FontSize="12" Style="{StaticResource MahApps.Styles.Button.Dialogs.Accent}" Click="BtnAll_Click">
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <iconPacks:PackIconModern Kind="Magnify" Margin="5"/>
+                            <TextBlock Text="{Binding}" Margin="5"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+            <Button x:Name="BtnMoveFacilities" Content="편의시설 보기" Margin="5, 20" FontSize="12" Style="{StaticResource MahApps.Styles.Button.Dialogs.Accent}" Click="BtnMoveFacilities_Click">
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <iconPacks:PackIconModern Kind="ListAdd" Margin="5"/>
+                            <TextBlock Text="{Binding}" Margin="5"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+            <Button x:Name="BtnAddFavorite" Content="즐겨찾기 추가" Margin="5, 20" FontSize="12" Style="{StaticResource MahApps.Styles.Button.Dialogs.Accent}" Click="BtnAddFavorite_Click">
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <iconPacks:PackIconModern Kind="ListAdd" Margin="5"/>
+                            <TextBlock Text="{Binding}" Margin="5"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+            <Button x:Name="BtnViewFavorite" Content="즐겨찾기 보기" Margin="5, 20" FontSize="12" Style="{StaticResource MahApps.Styles.Button.Square.Highlight}" 
+                    Click="BtnViewFavorite_Click">
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <iconPacks:PackIconModern Kind="List" Margin="5"/>
+                            <TextBlock Text="{Binding}" Margin="5"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+            <Button x:Name="BtnDelFavorite" Content="즐겨찾기 삭제" Margin="5, 20" FontSize="12" Style="{StaticResource MahApps.Styles.Button.Square}" Click="BtnDelFavorite_Click">
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <iconPacks:PackIconModern Kind="ListDelete" Margin="5"/>
+                            <TextBlock Text="{Binding}" Margin="5"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+            <!--<Button x:Name="BtnNaverMovie" Content="네이버 영화" Foreground="#099A49" Margin="5, 20" FontSize="12" Style="{StaticResource MahApps.Styles.Button}" Click="BtnNaverMovie_Click">
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="naver.png" Width="16" />
+                            <TextBlock Text="{Binding}" Margin="5"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>-->
+        </StackPanel>
+        <StatusBar Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="-10">
+            <StatusBarItem Content="Busan GalMaetGil Course App" />
+            <Separator Style="{StaticResource MahApps.Styles.Separator.StatusBar}" />
+            <StatusBarItem x:Name="StsResult" />
+        </StatusBar>
+
+    </Grid>
+</mah:MetroWindow>

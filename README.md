@@ -83,3 +83,12 @@ Windows Presentation Foundation
 		- 기타 OpenAPI
 		
 미세먼지확인앱<img src = "https://raw.githubusercontent.com/kooweajeeI/pknu-wpf-2023/main/images/wpf07.gif" width="700" />
+
+## 10일차
+- WPF 응용
+	- 개인 포트폴리오 개발방식
+		- 데이터포털 OpenAPI
+		- 부산광역시 갈맷길 추천코스
+			- 부산광역시 갈맷길 편의시설 정보
+			
+갈맷길 App <img src = "https://raw.githubusercontent.com/kooweajeeI/pknu-wpf-2023/main/images/wpf08.gif" width="700" />
