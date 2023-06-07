@@ -496,6 +496,11 @@ namespace wp11_movieFinder
 
             BtnViewFavorite_Click(sender, e);   // 즐겨찾기 보기 이벤트핸들러를 한번실행
         }
+
+        private void TxtMovieName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 
 }
